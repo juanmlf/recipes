@@ -2,11 +2,11 @@ package com.jleruga.recipes.data
 
 import com.jleruga.recipes.data.remote.RecipesRemoteDataSource
 import com.jleruga.recipes.data.local.RecipesLocalDataSource
-import com.jleruga.recipes.data.model.Meal
+import com.jleruga.recipes.data.remote.model.Meal
 import com.jleruga.recipes.domain.RecipesRepository
-import com.jleruga.recipes.domain.model.Recipe as RecipeDomain
-import com.jleruga.recipes.data.model.Recipe as RecipeData
-import com.jleruga.recipes.domain.model.toDomain
+import com.jleruga.recipes.domain.model.RecipeDomain as RecipeDomain
+import com.jleruga.recipes.data.remote.model.Recipe as RecipeData
+import com.jleruga.recipes.data.mapper.toDomain
 import retrofit2.Response
 import java.util.zip.DataFormatException
 import javax.inject.Inject

@@ -4,12 +4,8 @@ import com.jleruga.recipes.data.remote.RecipesRemoteDataSource
 import com.jleruga.recipes.data.RecipesRepositoryImpl
 import com.jleruga.recipes.data.local.RecipesDatabase
 import com.jleruga.recipes.data.local.RecipesLocalDataSource
-import com.jleruga.recipes.data.model.GetRecipesResponse
-import com.jleruga.recipes.data.remote.service.BaseService
 import com.jleruga.recipes.data.remote.service.RecipesEdamamService
-import com.jleruga.recipes.data.remote.service.RecipesService
 import com.jleruga.recipes.data.remote.service.RecipesServiceProvider
-import com.jleruga.recipes.data.remote.utils.BaseUrlApi
 import com.jleruga.recipes.data.remote.utils.RetrofitUtil
 import com.jleruga.recipes.domain.GetRecipesByNameUseCase
 import com.jleruga.recipes.domain.RecipesRepository

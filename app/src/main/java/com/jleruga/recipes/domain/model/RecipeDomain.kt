@@ -1,6 +1,6 @@
 package com.jleruga.recipes.domain.model
 
-data class Recipe (
+data class RecipeDomain (
     var id: String,
     var name: String? = null,
     var ingredients: List<String>? = null,

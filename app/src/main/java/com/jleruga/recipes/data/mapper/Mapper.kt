@@ -1,13 +1,12 @@
-package com.jleruga.recipes.domain.model
+package com.jleruga.recipes.data.mapper
 
-import com.jleruga.recipes.data.local.model.RecipeDao
 import com.jleruga.recipes.data.local.model.RecipeEntity
-import com.jleruga.recipes.data.model.Meal
-import com.jleruga.recipes.ui.util.getMockedRecipe
-import com.jleruga.recipes.data.model.Recipe as RecipeData
+import com.jleruga.recipes.data.remote.model.Meal
+import com.jleruga.recipes.domain.model.RecipeDomain
+import com.jleruga.recipes.data.remote.model.Recipe as RecipeData
 
-fun Meal.toDomain(): Recipe {
-    return Recipe(
+fun Meal.toDomain(): RecipeDomain {
+    return RecipeDomain(
         id = idMeal,
         name = strMeal,
         ingredients = getIngredientsList(this),
@@ -19,8 +18,8 @@ fun Meal.toDomain(): Recipe {
     )
 }
 
-fun RecipeData.toDomain() : Recipe {
-    return Recipe(
+fun RecipeData.toDomain() : RecipeDomain {
+    return RecipeDomain(
         id = uri.split("recipe_")[1],
         name = label,
         ingredients = ingredientLines,
@@ -49,8 +48,8 @@ private fun getIngredientsList(meal: Meal?): List<String> {
     return list
 }
 
-fun RecipeEntity.toDomain(): Recipe {
-    return Recipe(
+fun RecipeEntity.toDomain(): RecipeDomain {
+    return RecipeDomain(
         id = id,
         name = name,
         ingredients = ingredients,
@@ -62,7 +61,7 @@ fun RecipeEntity.toDomain(): Recipe {
     )
 }
 
-fun Recipe.toModel(): RecipeEntity {
+fun RecipeDomain.toModel(): RecipeEntity {
     return RecipeEntity(
         id = id,
         name = name,

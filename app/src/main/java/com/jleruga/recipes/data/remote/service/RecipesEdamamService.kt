@@ -1,6 +1,6 @@
 package com.jleruga.recipes.data.remote.service
 
-import com.jleruga.recipes.data.model.GetRecipesEdamamResult
+import com.jleruga.recipes.data.remote.response.GetRecipesEdamamResult
 import com.jleruga.recipes.data.remote.utils.ApiConstants
 import com.jleruga.recipes.data.remote.utils.RetrofitUtil
 import retrofit2.Response

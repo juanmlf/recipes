@@ -1,6 +1,5 @@
 package com.jleruga.recipes.data.remote.service
 
-import com.jleruga.recipes.data.model.GetRecipesResponse
 import com.jleruga.recipes.data.remote.utils.BaseUrlApi
 import com.jleruga.recipes.data.remote.utils.RetrofitUtil
 

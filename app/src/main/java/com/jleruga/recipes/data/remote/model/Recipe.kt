@@ -1,4 +1,4 @@
-package com.jleruga.recipes.data.model
+package com.jleruga.recipes.data.remote.model
 
 import com.google.gson.annotations.SerializedName
 

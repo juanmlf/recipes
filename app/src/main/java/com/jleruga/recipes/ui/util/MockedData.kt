@@ -1,10 +1,10 @@
 package com.jleruga.recipes.ui.util
 
-import com.jleruga.recipes.domain.model.Recipe
+import com.jleruga.recipes.domain.model.RecipeDomain
 import java.util.UUID
 
-fun getMockedRecipe(): Recipe{
-    return Recipe(
+fun getMockedRecipe(): RecipeDomain{
+    return RecipeDomain(
         id = UUID.randomUUID().toString(),
         name = "Sopa de nabo",
         ingredients = listOf("Ingrediente 1", "Ingrediente 2", "Ingrediente 3"),
@@ -16,9 +16,9 @@ fun getMockedRecipe(): Recipe{
     )
 }
 
-fun getMockedRecipeList(): List<Recipe>{
+fun getMockedRecipeList(): List<RecipeDomain>{
     return listOf(
-        Recipe(
+        RecipeDomain(
         id = UUID.randomUUID().toString(),
         name = "Sopa de nabo",
         ingredients = listOf("", "", ""),
@@ -28,7 +28,7 @@ fun getMockedRecipeList(): List<Recipe>{
         area = "Almuerzos",
         date = "12/02/2024"
     ),
-        Recipe(
+        RecipeDomain(
             id = UUID.randomUUID().toString(),
             name = "Sopa de nabo",
             ingredients = listOf("", "", ""),
@@ -38,7 +38,7 @@ fun getMockedRecipeList(): List<Recipe>{
             area = "Almuerzos",
             date = "12/02/2024"
         ),
-        Recipe(
+        RecipeDomain(
             id = UUID.randomUUID().toString(),
             name = "Sopa de nabo",
             ingredients = listOf("", "", ""),
@@ -48,7 +48,7 @@ fun getMockedRecipeList(): List<Recipe>{
             area = "Almuerzos",
             date = "12/02/2024"
         ),
-        Recipe(
+        RecipeDomain(
             id = UUID.randomUUID().toString(),
             name = "Sopa de nabo",
             ingredients = listOf("", "", ""),

@@ -1,13 +1,14 @@
-package com.jleruga.recipes.data.model
+package com.jleruga.recipes.data.remote.response
 
-import com.jleruga.recipes.domain.model.Recipe
+import com.jleruga.recipes.data.remote.model.Meal
+import com.jleruga.recipes.data.remote.model.Recipe
 
 interface GetRecipesResponse {
     fun getRecipes(): List<Any>
 }
 
 data class RecipesResult(
-    val recipe: com.jleruga.recipes.data.model.Recipe
+    val recipe: Recipe
 )
 
 data class GetRecipesResult(
@@ -22,7 +23,7 @@ data class GetRecipesEdamamResult (
     val hits: List<RecipesResult>
 ) : GetRecipesResponse {
     override fun getRecipes(): List<Any> {
-        return mutableListOf<com.jleruga.recipes.data.model.Recipe>().apply {
+        return mutableListOf<Recipe>().apply {
             hits.forEach { hit ->
                 this.add(hit.recipe) }
         }
